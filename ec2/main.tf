@@ -32,3 +32,22 @@ resource "aws_key_pair" "ssh_key" {
 output "ec2_public_ip" {
  value = aws_instance.demo.public_ip
 }
+
+resource "aws_s3_bucket" "demo_bucket" {
+  bucket = "demo-terraform-bucket-12345678"
+
+
+  tags = {
+    Name        = "demo_bucket"
+    Environment = "Dev"
+  }
+  
+}
+
+
+resource "aws_s3_object" "demo_object" {
+  bucket = aws_s3_bucket.demo_bucket.id
+  key    = "example.txt"
+  content = "This is an example file uploaded via Terraform."
+  
+}
