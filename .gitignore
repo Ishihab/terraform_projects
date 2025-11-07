@@ -1,9 +1,3 @@
-
-/s3_static_web/terraform.tfstate
-/s3_static_web/terraform.tfstate.backup
-/s3_static_web/.terraform/
-/s3_static_web/.terraform.lock.hcl
-/ec2/terraform.tfstate
-/ec2/terraform.tfstate.backup
-/ec2/.terraform/
-/ec2/.terraform.lock.hcl
+# Terraform directories
+.terraform/
+*.terraform.lock.hcl
