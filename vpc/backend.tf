@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "terraform-remotestate-dockyard43526"
-    key    = "vpc"
+    key    = "vpc/terraform.tfstate"
     region = "us-east-1"
     profile = "terraform_dockyard"
     use_lockfile = true
